@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JOKENPO!</title>
+   <script>
+   
+      do {
+   
+         do {
+   
+            jogada = parseInt(window.prompt("Escolha sua jogada! Pedra(1), Papel(2), Tesoura(3)"));
+   
+            if (jogada >= 1 && jogada <= 3) {
+               switch (jogada) {
+                  case 1:
+                     window.alert("Voce escolheu Pedra");
+                     break;
+                  case 2:
+                     window.alert("Voce escolheu Papel");
+                     break;
+                  case 3:
+                     window.alert("Voce escolheu Tesoura");
+                     break;
+               }
+   
+            } else {
+               window.alert("Opção inválida! Digite apenas números válidos!(1,2,3)");
+            }
+   
+         } while (jogada < 1 || jogada > 3 || !jogada);
+   
+   
+   
+         mach = Math.floor(Math.random() * 3 + 1);
+   
+         switch (mach) {
+            case 1:
+               window.alert("A maquina escolheu Pedra");
+               break;
+            case 2:
+               window.alert("A maquina escolheu Papel");
+               break;
+            default:
+               window.alert("A maquina escolheu Tesoura");
+         }
+   
+   
+         if (jogada === mach) {
+            window.alert("EMPATE");
+         } else if (jogada == 1 && mach == 2) {
+            window.alert("Voce perdeu...");
+         } else if (jogada == 1 && mach == 3) {
+            window.alert("Voce venceu!")
+         } else if (jogada == 2 && mach == 1) {
+            window.alert("Voce perdeu...");
+         } else if (jogada == 2 && mach == 3) {
+            window.alert("Voce perdeu...")
+         } else if (jogada == 3 && mach == 1) {
+            window.alert("Voce perdeu...");
+         } else {
+            window.alert("Voce venceu!")
+         }
+   
+         continuar = window.confirm("Deseja continuar jogando?");
+   
+   
+      } while (continuar);
+   
+   
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
+
+
+
+
+
